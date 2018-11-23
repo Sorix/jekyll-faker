@@ -12,10 +12,10 @@ module Jekyll
     # Provides `{% faker %}` tag for Liquid.
     #   This is not tied to Jekyll.
     # --
-    class Tag < Liquid::Block
-      Faker::Config.locale = 'ru'
-      
+    class Tag < Liquid::Block      
       public_class_method :new
+      
+      Faker::Config.locale = 'ru'
 
       # --
       # @return [String]
