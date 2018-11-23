@@ -6,6 +6,8 @@ require "liquid/tag/parser"
 require_relative "version"
 require "faker"
 
+Faker::Config.locale = 'ru'
+
 module Jekyll
   module Faker
     # --
@@ -14,8 +16,6 @@ module Jekyll
     # --
     class Tag < Liquid::Block      
       public_class_method :new
-      
-      Faker::Config.locale = 'ru'
 
       # --
       # @return [String]
