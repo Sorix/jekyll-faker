@@ -13,6 +13,8 @@ module Jekyll
     #   This is not tied to Jekyll.
     # --
     class Tag < Liquid::Block
+      Faker::Config.locale = 'ru'
+      
       public_class_method :new
 
       # --
